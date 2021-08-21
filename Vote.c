@@ -1,9 +1,14 @@
+/* 
+C-Bootcamp Project
+Created By:
+Ajmal VA
+Krishnapriya EK
+Linu jacob
+*/
+
 #include <stdlib.h>
 #include<stdio.h>
 #include<string.h>
-
-
-
 
 void printMessageCenter(const char* message)
 {
@@ -39,7 +44,7 @@ void welcomeMessage()
 {
     headMessage("Welcome to The Election");
     printf("\n\n\n\n\n");
-    printf("\n\t\t\t  *------------------*\n");
+    printf("\n\t\t\t                   *------------------*\n");
     printf("\n\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
     printf("\n\t\t\t        =                 WELCOME                   =");
     printf("\n\t\t\t        =                   TO                      =");
@@ -47,8 +52,8 @@ void welcomeMessage()
     printf("\n\t\t\t        =                  VOTING                   =");
     printf("\n\t\t\t        =                 MACHINE                   =");
     printf("\n\t\t\t        =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
-    printf("\n\t\t\t  *------------------*\n");
-    printf("\n\n\n\t\t\t Enter any key to continue.....");
+    printf("\n\t\t\t                   *------------------*\n");
+    printf("\n\n\n\t\t\t Enter any key to continue...");
     getch();
 }
 void main()
@@ -106,7 +111,7 @@ while(n1==1)
     printf("Press enter to continue....\n");
     getch();
     char *date =  malloc(sizeof(char) * 8);
-    headMessage("VOTER DETAILS");
+    headMessage("================ VOTER DETAILS ================");
 	printf("\nEnter your voter ID\n");
 	scanf("%s",date);
     strcpy(vote[k],date);
@@ -149,6 +154,7 @@ if(flag==0)
         field = strtok(buf, ",");//Store next kilobyte into buffer;
 		if(strcmp(field,date) == 0)//Check if date matches input
 		{
+            headMessage("================ VOTER DETAILS ================");
 			while(field){
 		  		if (field_count == 0) {
 		            printf("\nVOTER ID:\t");
@@ -177,7 +183,7 @@ printf("Press any key to continue......\n");
 getch();
 
 printf("Cast your vote by selecting the symbol of your representative\n");
-        headMessage("CASTING THE VOTE");
+        headMessage("============= CASTING THE VOTE ==============");
         printf("\n");printf("\n");printf("\n");
         printf("Enter the symbol of your Representative :\n");
         for(i=0;i<n5;i++)
@@ -227,19 +233,19 @@ printf("Cast your vote by selecting the symbol of your representative\n");
                 continue;
             }
 
-headMessage("MENU");
+headMessage("============ MENU ===========");
 
 while(n1==1)
 
 {
     printf("\n");printf("\n");printf("\n");
 
-    printf("Enter your choice \n1.  Results\n2.  Difference between the votes of any two candidates\n3.  Finish your voting\n4.  EXIT the Poll\n  ");
+    printf("============== Enter your choice ============ \n1.  Results\n2.  Difference between the votes of any two candidates\n3.  Continue voting\n4.  EXIT the Poll\n  ");
     scanf("%d",&n);
 
         if(n==1)
         {
-            headMessage("Results");
+            headMessage("================= Results ===============");
             printf("\n\n\n");
             printf("The Result according to votes casted so far is as follows : \n");
             printf("\n");printf("\n");printf("\n");
@@ -251,7 +257,7 @@ while(n1==1)
         }
          else if(n==2)
          {
-             headMessage("Difference");
+             headMessage("================ Difference =================");
              printf("\n\n\n");
              for(i=0;i<n5;i++)
         {
@@ -287,7 +293,7 @@ else
     printf("\a\a\a\a\aError!!!! You already casted your vote ");printf("\n\n\n");
     printf("press any key to continue\n");
 }
-headMessage(" FINAL RESULTS");
+headMessage("================= FINAL RESULTS ==================");
 for(i=0; i<n5; i++)
     {
 
